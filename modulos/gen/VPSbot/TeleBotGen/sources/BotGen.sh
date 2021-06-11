@@ -9,7 +9,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/VPSbot/TeleBotGen/Control/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
@@ -31,7 +31,7 @@ SRC="${CIDdir}/sources" && [[ ! -d ${SRC} ]] && mkdir ${SRC}
 CID="${CIDdir}/User-ID" && [[ ! -e ${CID} ]] && echo > ${CID}
 keytxt="${CIDdir}/keys" && [[ ! -d ${keytxt} ]] && mkdir ${keytxt}
 [[ $(dpkg --get-selections|grep -w "jq"|head -1) ]] || apt-get install jq -y &>/dev/null
-[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/ChumoGH/VPSbot/main/ShellBot.sh &> /dev/null
+[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/VPSbot/ShellBot.sh &> /dev/null
 [[ -e /etc/texto-bot ]] && rm /etc/texto-bot
 LINE=" ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
 
