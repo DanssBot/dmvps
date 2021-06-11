@@ -1,5 +1,5 @@
 #!/bin/bash
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NodW1vR0gvVlBTYm90L21haW4vVGVsZUJvdEdlbi9zb3VyY2Vz"
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NhdmFsaWVyaTIyL01vZC9tYXN0ZXIvbW9kdWxvcy9nZW4vVlBTYm90L1RlbGVCb3RHZW4vc291cmNlcw=="
 SUB_DOM='base64 -d'
 bar="\e[0;36m=====================================================\e[0m"
 
@@ -10,7 +10,7 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
- permited=$(curl -sSL "https://raw.githubusercontent.com/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+ permited=$(curl -sSL "https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/VPSbot/TeleBotGen/Control/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
