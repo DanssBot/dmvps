@@ -1,0 +1,56 @@
+#!/bin/bash
+menu_src () {
+bot_retorno="  🎊 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  𝙲𝚑𝚞𝚖𝚘𝙶𝙷-𝙰𝙳𝙼  🎊\n"
+	 if [[ $(echo $permited|grep "${chatuser}") = "" ]]; then
+		 if [[ $(cat ${CID}|grep "${chatuser}") = "" ]]; then
+		 	 bot_retorno+="$LINE\n"
+			 bot_retorno+="  ⚠️ TENDRAS ACCESO ILIMITADO ⚠️ \n  🚫 Sin TU RESELLER EN LA KEY 🚫"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="/ID    | Muestra sus ID |\n"
+			 bot_retorno+="/menu  | MENU DE COMANDOS |\n"
+			 bot_retorno+="/ayuda | INSTRUCCIONES DE COMANDOS |\n"
+			 bot_retorno+="$LINE\n"
+			 msj_fun
+		 else
+		 	[[ -e /etc/menu_ito ]] && nomkey="$(cat /etc/menu_ito)" || nomkey="$(curl -sSL "https://www.dropbox.com/s/z38hj1mz3q9krso/menu_credito")"
+		 	numkey_used=$(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l)
+			numkey_gen=$(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l)
+			bot_retorno+="$LINE\n"
+			 bot_retorno+="  ⚠️ TENDRAS ACCESO ILIMITADO ⚠️ \n  🚫 Sin TU RESELLER EN LA KEY 🚫"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="Reseller Actual: $nomkey\n"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="/ID     | Muestra sus ID |\n"
+			 bot_retorno+="/instal | INSTALADOR OFICIAL |\n"
+			 bot_retorno+="/menu   | MENU DE COMANDOS | \n"
+			 bot_retorno+="/ayuda  | INSTRUCCIONES DE COMANDOS |\n"
+			 bot_retorno+="/donar  | Agradecer Trabajo |\n"
+			 bot_retorno+=" 🔐 『 $numkey_used 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $numkey_gen 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
+			 bot_retorno+="$LINE\n"
+			 menu_print
+		 fi
+		 
+	 else
+		 unset PID_GEN
+		 
+		 PID_GEN=$(ps x|grep -v grep|grep "http-server.sh")
+		 [[ ! $PID_GEN ]] && PID_GEN='(Offline) ❌' || PID_GEN='(Online) ✅'
+
+		 unset usadas
+		 usadas="$(cat /etc/http-instas)"
+		 [[ ! $usadas ]] && k_used="0" || k_used="$usadas"
+		 bot_retorno+="Gen $PID_GEN | Keys Used [$k_used]\n"
+
+		 bot_retorno+="$LINE\n"
+		 bot_retorno+="/infosys | INFORMACION DE SERVIDOR |\n"
+		 bot_retorno+="/list | MUESTRA LISTA DE ID PERMITIDOS\n"
+		 bot_retorno+="/instal | INSTALADOR OFICIAL |\n"
+		 bot_retorno+="/menu | MENU DE ACCIONES |\n"
+		 bot_retorno+="/ayuda | INSTRUCCIONES DE COMANDOS |\n"
+		 bot_retorno+="/cache | OPTIMIZA SERVIDOR |\n"
+		 bot_retorno+="/update | ACTUALIZA BOT |\n"
+		 bot_retorno+="/reboot | REINICIA SERVIDOR VPS |\n"
+		 bot_retorno+="$LINE\n"
+		 menu_print
+	 fi	
+}
