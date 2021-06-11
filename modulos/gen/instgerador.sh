@@ -2,7 +2,7 @@
 BARRA="\033[1;36m-----------------------------------------------------\033[0m"
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NodW1vR0gvQ2h1bW9HSC1TY3JpcHQvbWFzdGVyL0JPVC9nZXJhZG9y"
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NhdmFsaWVyaTIyL01vZC9tYXN0ZXIvbW9kdWxvcy9nZW4vZ2VyYWRvcg=="
 SUB_DOM='base64 -d'
 rm $(pwd)/$0
 
@@ -123,7 +123,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/VPSbot/TeleBotGen/Control/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;31m====================================================="
   echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
@@ -165,7 +165,7 @@ echo "$Key" > $IVAR
 cp /bin/http-server.sh /etc/SCRIPT
 mv /etc/SCRIPT/http-server.sh /etc/SCRIPT/http-server.py
 chmod +x /etc/SCRIPT/http-server.py
-wget https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/BOT/gerador/gerar.sh &>/dev/null
+wget https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/gerador/gerar.sh &>/dev/null
 mv gerar.sh /etc/SCRIPT
 chmod +x /etc/SCRIPT/gerar.sh
 cd /etc/SCRIPT/
