@@ -522,12 +522,12 @@ msg -bar
 echo -e "\033[1;37m ACTUALIZANDO......"
 msg -bar
 rm -rf $SCPT_DIR &>/dev/null
-wget https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/BOT/instgerador.sh &> /dev/null; chmod 777 instgerador.sh* && ./instgerador.sh*
+wget https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/instgerador.sh &> /dev/null; chmod 777 instgerador.sh* && ./instgerador.sh*
 sleep 3
 }
 
 pass_admin () {
-permited=$(ofus $(curl -sSL "https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/BOT/passw"))
+permited=$(ofus $(curl -sSL "https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/passw"))
 read -p "ESCRIBA SU CONTRASEÑA: " passw
 if [[ $permited = $passw ]]; then
 	clear
@@ -535,7 +535,7 @@ if [[ $permited = $passw ]]; then
 	echo -e "\033[1;37m ACTUALIZANDO......"
 	msg -bar
 	sleep 2
-	wget -O $HOME/instger.sh https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/BOT/instgerador.sh &>/dev/null
+	wget -O $HOME/instger.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/instgerador.sh &>/dev/null
 	chmod +x $HOME/instger.sh
 	cd $HOME
 	rm -rf $SCPT_DIR &>/dev/null
@@ -566,14 +566,14 @@ elif [[ $1 = 2 ]]; then
 msg -bar
 echo -e "\033[7;49;35m             LINKS INSTALL SCRIPT ChumoGH         "
 msg -bar
-echo -e "\033[1;37msudo apt update -y; apt upgrade -y; https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/BOT/instgerador.sh &> /dev/null; chmod 777 instgerador.sh* && ./instgerador.sh*"
+echo -e "\033[1;37msudo apt update -y; apt upgrade -y; https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/instgerador.sh &> /dev/null; chmod 777 instgerador.sh* && ./instgerador.sh*"
 msg -bar
 fi
 }
 
 bot_menu () {
 CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-[[ ! -e "${CIDdir}/confbot.sh" ]] && wget -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/ChumoGH/VPSbot/main/confbot.sh &> /dev/null && chmod +x ${CIDdir}/confbot.sh
+[[ ! -e "${CIDdir}/confbot.sh" ]] && wget -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/modulos/gen/VPSbot/confbot.sh &> /dev/null && chmod +x ${CIDdir}/confbot.sh
 sed -i -e 's/\r$//' ${CIDdir}/confbot.sh
 source ${CIDdir}/confbot.sh
 bot_conf
