@@ -27,7 +27,7 @@ function_verify () {
   echo -e "\e[32m=====================================================\n\n\n\e[0m"
   [[ -d /etc/ADM-db ]] && rm -rf /etc/ADM-db
   CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-  v1=$(curl -sSL "https://www.dropbox.com/s/blxo0jifysvyrey/v-new.log")
+  v1=$(curl -sSL "https://www.dropbox.com/s/vhqhktc6v1bxioi/v-local.log")
   echo "$v1" > /etc/ADM-db/vercion
   echo "@ChumoGH" > ${CIDdir}/resell
   }
@@ -210,7 +210,7 @@ PID_GEN=$(ps x|grep -v grep|grep "BotGen.sh")
 
 CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
 echo -e "$bar"
-echo -e "     \e[47m \e[30m>>>>>>  BotGen by \e[1;36mChumoGH\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
+echo -e "     \e[47m \e[30m>>>>>>  BotGen by \e[1;36mCAVALIERI\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
 echo -e "$bar"
 echo -e "\033[1;32m[1] \033[1;36m> \033[1;37mTOKEN DEL BOT"
 echo -e "\033[1;32m[2] \033[1;36m> \033[1;37mINICIAR/PARAR BOT $PID_GEN\033[0m"
