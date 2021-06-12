@@ -21,7 +21,7 @@ upfile_src
 addID_reply () {
       [[ $(cat ${CID}|grep "${message_text[$id]}") = "" ]] && {
         echo "/${message_text[$id]}" >> ${CID}
-          bot_retorno="  🎊 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  𝙲𝚑𝚞𝚖𝚘𝙶𝙷-𝙰𝙳𝙼  🎊\n"
+          bot_retorno="  ⚡ 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  ADM-NETVPS  ⚡\n"
           bot_retorno+="✅ *ID agregado * ✅\n"
           bot_retorno+="$LINE\n"
           bot_retorno+="$(< ${CID})\n"
@@ -29,7 +29,7 @@ addID_reply () {
           bot_retorno+="New ID: ${message_text[$id]}\n"
           bot_retorno+="$LINE"
 
-          bot_retor="  🎊 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  𝙲𝚑𝚞𝚖𝚘𝙶𝙷-𝙰𝙳𝙼  🎊\n"
+          bot_retor="  ⚡ 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  ADM-NETVPS  ⚡\n"
           bot_retor+="El Administrador $(cat < /etc/ADM-db/resell) te autoriso\n"
           bot_retor+="Para GENERAR Key's usar el comando /keygen\n"
           bot_retor+="Para MENU Digita el comando /menu\n"
