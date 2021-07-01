@@ -166,10 +166,6 @@ ShellBot.InlineKeyboardButton --button 'botao_conf' --line 2 --text 'MENU' --cal
 ShellBot.InlineKeyboardButton --button 'botao_conf' --line 3 --text 'GENERAR KEY' --callback_data '/keygen'
 ShellBot.InlineKeyboardButton --button 'botao_user' --line 1 --text 'GENERAR KEY' --callback_data '/keygen'
 
-ShellBot.InlineKeyboardButton --button 'botao_donar' --line 1 --text 'Donar Paypal' --callback_data '1' --url 'https://www.paypal.me/xxx'
-ShellBot.InlineKeyboardButton --button 'botao_donar' --line 2 --text 'Donar BTC' --callback_data '1' --url '36XCoy4JMRZhM1r4Q79SJjd1nyEUTTGFUj'
-ShellBot.InlineKeyboardButton --button 'botao_donar' --line 3 --text 'ACCEDER WHATSAPP' --callback_data '1' --url 'https://wa.me/593987072611'
-
 # Ejecutando escucha del bot
 while true; do
     ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
