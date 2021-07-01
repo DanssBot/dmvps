@@ -40,8 +40,8 @@ addID_reply () {
           bot_retor+="Para MENU Digita el comando /menu\n"
           bot_retor+="Para actualizar el menu de comandos\n"
           bot_retor+="$LINE"
-          bot_retor+="Recuerda adquirir creditos, o Realizar tu donativo Voluntario  \n Paypal : xxx\n"
-          bot_retor+="Si tienes inconvenientes con el Bot \n Contactame : https://wa.me/593987072611\n"
+          bot_retor+="Recuerda adquirir creditos, o Realizar tu donativo Voluntario  \n"
+          bot_retor+="Si tienes inconvenientes con el Bot \n Contactame : https://wa.me/+51928565088"
           bot_retor+="$LINE\n"
       msj_fun
       msj_add ${message_text[$id]}
