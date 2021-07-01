@@ -9,16 +9,16 @@ echo "$IP" > /usr/bin/vendor_code
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+  permited=$(curl -sSL "https://www.dropbox.com/s/hb6wyvxs8rz20bj/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
-  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @birkank22"
   echo -e "\e[31m=====================================================\n\n\n\e[0m"
   exit 1
   } || {
   ### INTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://www.dropbox.com/s/blxo0jifysvyrey/v-new.log")
+  v1=$(curl -sSL "https://www.dropbox.com/s/vhqhktc6v1bxioi/v-local.log")
   echo "$v1" > /etc/ADM-db/vercion
   }
 }
@@ -31,7 +31,7 @@ SRC="${CIDdir}/sources" && [[ ! -d ${SRC} ]] && mkdir ${SRC}
 CID="${CIDdir}/User-ID" && [[ ! -e ${CID} ]] && echo > ${CID}
 keytxt="${CIDdir}/keys" && [[ ! -d ${keytxt} ]] && mkdir ${keytxt}
 [[ $(dpkg --get-selections|grep -w "jq"|head -1) ]] || apt-get install jq -y &>/dev/null
-[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/ChumoGH/VPSbot/main/ShellBot.sh &> /dev/null
+[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/Install/VPSBOT%20ADMVPS%20V4.5a/ShellBot.sh &> /dev/null
 [[ -e /etc/texto-bot ]] && rm /etc/texto-bot
 LINE=" ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
 
@@ -123,7 +123,7 @@ upfile_fun () {
 
 invalido_fun () {
 	[[ ! -z ${callback_query_message_chat_id[$id]} ]] && var=${callback_query_message_chat_id[$id]} || var=${message_chat_id[$id]}
-local bot_retorno="  🎊 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  𝙲𝚑𝚞𝚖𝚘𝙶𝙷-𝙰𝙳𝙼  🎊\n"
+local bot_retorno="  ⚡ 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  ADM-VPS  ⚡\n"
 	 bot_retorno+="$LINE\n"
          bot_retorno+="𝙲𝚘𝚖𝚊𝚗𝚍𝚘 𝙸𝚗𝚟𝚊𝚕𝚒𝚍𝚘!! 𝚃𝚎𝚌𝚕𝚎𝚊 /𝚊𝚢𝚞𝚍𝚊 𝚙𝚊𝚛𝚊 𝙲𝚘𝚗𝚘𝚌𝚎𝚛 𝚕𝚘𝚜 𝙿𝚊𝚜𝚘𝚜! \n O Contacta a $(cat < /etc/ADM-db/resell) \n"
          bot_retorno+="$LINE\n"
@@ -166,7 +166,7 @@ ShellBot.InlineKeyboardButton --button 'botao_conf' --line 2 --text 'MENU' --cal
 ShellBot.InlineKeyboardButton --button 'botao_conf' --line 3 --text 'GENERAR KEY' --callback_data '/keygen'
 ShellBot.InlineKeyboardButton --button 'botao_user' --line 1 --text 'GENERAR KEY' --callback_data '/keygen'
 
-ShellBot.InlineKeyboardButton --button 'botao_donar' --line 1 --text 'Donar Paypal' --callback_data '1' --url 'https://www.paypal.me/ChumoGH'
+ShellBot.InlineKeyboardButton --button 'botao_donar' --line 1 --text 'Donar Paypal' --callback_data '1' --url 'https://www.paypal.me/xxx'
 ShellBot.InlineKeyboardButton --button 'botao_donar' --line 2 --text 'Donar BTC' --callback_data '1' --url '36XCoy4JMRZhM1r4Q79SJjd1nyEUTTGFUj'
 ShellBot.InlineKeyboardButton --button 'botao_donar' --line 3 --text 'ACCEDER WHATSAPP' --callback_data '1' --url 'https://wa.me/593987072611'
 
