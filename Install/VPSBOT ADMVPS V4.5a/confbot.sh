@@ -1,5 +1,5 @@
 #!/bin/bash
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NodW1vR0gvVlBTYm90L21haW4vVGVsZUJvdEdlbi9zb3VyY2Vz"
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NhdmFsaWVyaTIyL01vZC9tYXN0ZXIvSW5zdGFsbC9WUFNCT1QlMjBBRE1WUFMlMjBWNC41YS9Tb3VyY2Vz"
 SUB_DOM='base64 -d'
 bar="\e[0;36m=====================================================\e[0m"
 
@@ -10,11 +10,11 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
- permited=$(curl -sSL "https://raw.githubusercontent.com/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+ permited=$(curl -sSL "https://www.dropbox.com/s/hb6wyvxs8rz20bj/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
-  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @birkank22"
   echo -e "\e[31m=====================================================\n\n\n\e[0m"
   [[ -d /etc/ADM-db ]] && rm -rf /etc/ADM-db
 [[ ! -e "/bin/ShellBot.sh" ]] && rm /bin/ShellBot.sh
@@ -23,10 +23,10 @@ function_verify () {
  ### INTALAR VERCION DE SCRIPT
   clear
   echo -e "\n\n\n\e[32m====================================================="
-  echo -e "\e[32m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!\n       SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+  echo -e "\e[32m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!\n       SI DESEAS USAR EL BOTGEN CONTACTE A @birkank22"
   echo -e "\e[32m=====================================================\n\n\n\e[0m"
   CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-  v1=$(curl -sSL "https://www.dropbox.com/s/blxo0jifysvyrey/v-new.log")
+  v1=$(curl -sSL "https://www.dropbox.com/s/vhqhktc6v1bxioi/v-local.log")
   echo "$v1" > /etc/ADM-db/vercion
   echo "@ChumoGH" > ${CIDdir}/resell
   
@@ -244,7 +244,7 @@ PID_on=$(ps x|grep -v grep|grep "modelid")
 limcont=$(cat /etc/ADM-db/limit) 
 [[ "${limcont}" = "999" ]] && limted="Ilimitado" || limted=$(cat /etc/ADM-db/limit)
 echo -e "$bar"
-echo -e "     \e[47m \e[30m>>>>>>  BotGen by \e[1;36mChumoGH\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
+echo -e "     \e[47m \e[30m>>>>>>  BotGen \e[1;36mADM-VPS\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
 echo -e "$bar"
 echo -e "\033[1;32m[1] \033[1;36m> \033[1;37mTOKEN DEL BOT $tk"
 echo -e "\033[1;32m[2] \033[1;36m> \033[1;37mINICIAR/PARAR BOT $PID_GEN\033[0m"
@@ -269,7 +269,7 @@ case $opcion in
 4) ini_res;;
 5) msj_prueba;;
 6) ayuda_fun;;
-7) source <(curl -sSL https://www.dropbox.com/s/f5mlwun3hkpq6k8/bot-permited.sh) ;;
+7) source <(curl -sSL https://www.dropbox.com/s/kb284oy50xwy7aq/bot-permited.sh) ;;
 8) act-bot ;;
 9) lim-bot ;;
 *) bot_gen;;
