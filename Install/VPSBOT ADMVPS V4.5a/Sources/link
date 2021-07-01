@@ -2,7 +2,7 @@
 link_src () {
 	bot_retorno="$LINE\n"
 	bot_retorno+=" ⚡ Instalador Oficial ⚡ \n 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04 \n"
-	bot_retorno+="Verificada tus Keys, https://t.me/ChumoGH_bot Reseller : @ChumoGH \n"
+	bot_retorno+="Verificada tus Keys, https://t.me/ADM-VIPS_BOT Reseller : @birkank22\n"
 	bot_retorno+="$LINE\n"
 	bot_retorno+="apt update -y; apt upgrade -y;wget -q https://www.dropbox.com/s/7xlgima7qsexoqo/instala.sh; chmod 777 instala.sh; ./instala.sh\n"
 	bot_retorno+="$LINE\n"
