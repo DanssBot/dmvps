@@ -1,0 +1,53 @@
+#!/bin/bash
+
+menu_src () {
+bot_retorno="=========INICIO=========\n"
+	 if [[ $(echo $permited|grep "${chatuser}") = "" ]]; then
+		 if [[ $(cat ${CID}|grep "${chatuser}") = "" ]]; then
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="  ⚠️ BIENVENIDO - SCRIPT ADMIN VPS ⚠️ \n  🚫 No tiene acceso al generador 🚫 \n"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="/ID    | Muestra sus ID |\n"
+			 bot_retorno+="/menu  | MENU DE COMANDOS |\n"
+			 bot_retorno+="/ayuda | INSTRUCCIONES DE COMANDOS |\n"
+			 bot_retorno+="$LINE\n"
+			 msj_fun
+		 else
+		 	[[ -e /etc/menu_ito ]] && nomkey="$(cat /etc/menu_ito)" || nomkey="$(curl -sSL "https://raw.githubusercontent.com/diesel09/Botgen/master/generadores/repos/credito")"
+		 	 bot_retorno+="$LINE\n"
+			 bot_retorno+="  ⚠️ SE HA LIBERADO TU ACCESO ILIMITADO ⚠️ \n  😀 FELICIDADES POR SUSCRIBIRTE 😀"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="Reseller Actual: $nomkey\n"
+			 bot_retorno+="$LINE\n"
+			 bot_retorno+="/ID     | Muestra su ID |\n"
+			 bot_retorno+="/instal | INSTALADOR OFICIAL |\n"
+			 bot_retorno+="/menu   | MENU DE COMANDOS | \n"
+			 bot_retorno+="/ayuda  | INSTRUCCIONES DE COMANDOS |\n"
+			 bot_retorno+="/keygen  | Presiona él botón para generar la key |\n"
+			 
+			 bot_retorno+="$LINE\n"
+			 menu_print
+		 fi
+	 else
+		 unset PID_GEN
+		 PID_GEN=$(ps x|grep -v grep|grep "http-server.sh")
+		  [[ ! $PID_GEN ]] && PID_GEN='(Offline) ❌' || PID_GEN='(Online) ✅'
+		  
+		 unset usadas
+		 usadas="$(cat /etc/http-instas)"
+		 [[ ! $usadas ]] && k_used="0" || k_used="$usadas"
+		 bot_retorno+="Gen $PID_GEN | Keys Used [$k_used]\n"
+		 
+		 bot_retorno+="$LINE\n"
+		 bot_retorno+="/infosys | INFORMACION DE SERVIDOR |\n"
+		 bot_retorno+="/list | MUESTRA LISTA DE ID PERMITIDOS\n"
+		 bot_retorno+="/instal | INSTALADOR OFICIAL |\n"
+		 bot_retorno+="/menu | MENU DE ACCIONES |\n"
+		 bot_retorno+="/ayuda | INSTRUCCIONES DE COMANDOS |\n"
+		 bot_retorno+="/cache | OPTIMIZA SERVIDOR |\n"
+		 bot_retorno+="/update | ACTUALIZA BOT |\n"
+		 bot_retorno+="/reboot | REINICIA SERVIDOR VPS |\n"
+		 bot_retorno+="$LINE\n"
+		 menu_print
+	 fi	
+}

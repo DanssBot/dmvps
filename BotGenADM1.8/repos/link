@@ -1,0 +1,8 @@
+#!/bin/bash
+
+link_src () {
+	bot_retorno="$LINE\n"
+	bot_retorno+="apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/diesel09/mxvps/master/vps-mx-free/instalscript.sh; chmod 777 instalscript.sh; ./instalscript.sh\n"
+	bot_retorno+="$LINE\n"
+msj_fun
+}
