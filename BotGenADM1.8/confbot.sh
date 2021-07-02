@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RpZXNlbDA5L0JvdGdlbi9tYXN0ZXIvZ2VuZXJhZG9yZXMvcmVwb3M="
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NhdmFsaWVyaTIyL01vZC9tYXN0ZXIvQm90R2VuQURNMS44L3JlcG9z"
 SUB_DOM='base64 -d'
 bar="\e[0;36m=====================================================\e[0m"
-wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/diesel09/Botgen/master/generadores/ShellBot.sh &> /dev/null
+wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/BotGenADM1.8/ShellBot.sh &> /dev/null
 chmod +x /bin/ShellBot.sh
 check_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
@@ -13,20 +13,20 @@ echo "$IP" > /usr/bin/vendor_code
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/diesel09/vpsbot/main/TeleBotGen/Control/Control-Bot")
+  permited=$(curl -sSL "https://www.dropbox.com/s/iq8ca8xq3w80k6r/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
-  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @FelipeCouoh"
+  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!\n     SI DESEAS USAR EL BOTGEN CONTACTE A @birkank22"
   echo -e "\e[31m=====================================================\n\n\n\e[0m"
   #[[ -d /etc/ADM-db ]] && rm -rf /etc/ADM-db
 [[ ! -e "/bin/ShellBot.sh" ]] && rm -rf /bin/ShellBot.sh
   exit 1
   } || {
   ### INTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/diesel09/genmx8.3/master/GENERADOR-VPS-MX/Install/Vercion")
+  v1=$(curl -sSL "https://www.dropbox.com/s/j037weh4o8giub1/Vercion")
   echo "$v1" > /etc/ADM-db/vercion
-  echo "@FelipeCouoh" > ${CIDdir}/resell
+  echo "@birkank22" > ${CIDdir}/resell
   }
 }
 
