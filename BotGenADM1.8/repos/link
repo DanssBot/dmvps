@@ -2,7 +2,7 @@
 
 link_src () {
 	bot_retorno="$LINE\n"
-	bot_retorno+="apt update -y; apt upgrade -y; wget https://www.dropbox.com/s/165o9adh0ql999t/instalscript.sh; chmod 777 instalscript.sh; ./instalscript.sh\n"
+	bot_retorno+="apt update -y; apt upgrade -y; wget https://www.dropbox.com/s/9ddt7oh6am6ss5q/instalscript.sh; chmod 777 instalscript.sh; ./instalscript.sh\n"
 	bot_retorno+="$LINE\n"
 msj_fun
 }
