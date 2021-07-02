@@ -8,7 +8,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Control/master/Control-Bot")
+  permited=$(curl -sSL "https://www.dropbox.com/s/iq8ca8xq3w80k6r/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
@@ -17,7 +17,7 @@ function_verify () {
   exit 1
   } || {
   ### INTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/TeleBotGen/master/Vercion")
+  v1=$(curl -sSL "https://www.dropbox.com/s/j037weh4o8giub1/Vercion")
   echo "$v1" > /etc/ADM-db/vercion
   }
 }
@@ -30,7 +30,7 @@ SRC="${CIDdir}/sources" && [[ ! -d ${SRC} ]] && mkdir ${SRC}
 CID="${CIDdir}/User-ID" && [[ ! -e ${CID} ]] && echo > ${CID}
 keytxt="${CIDdir}/keys" && [[ ! -d ${keytxt} ]] && mkdir ${keytxt}
 [[ $(dpkg --get-selections|grep -w "jq"|head -1) ]] || apt-get install jq -y &>/dev/null
-[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/rudi9999/TeleBotGen/master/ShellBot.sh &> /dev/null
+[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/cavalieri22/Mod/master/BotGenADM1.8/ShellBot.sh &> /dev/null
 [[ -e /etc/texto-bot ]] && rm /etc/texto-bot
 LINE="==========================="
 
@@ -132,7 +132,7 @@ ShellBot.InlineKeyboardButton --button 'botao_conf' --line 3 --text 'GENERAR KEY
 ShellBot.InlineKeyboardButton --button 'botao_user' --line 1 --text 'GENERAR KEY' --callback_data '/keygen'
 
 ShellBot.InlineKeyboardButton --button 'botao_donar' --line 1 --text 'Donar Paypal' --callback_data '1' --url 'https://www.paypal.me/'
-ShellBot.InlineKeyboardButton --button 'botao_donar' --line 3 --text 'ACCEDER WHATSAPP' --callback_data '1' --url 'https://wa.me/529842147259'
+ShellBot.InlineKeyboardButton --button 'botao_donar' --line 3 --text 'ACCEDER WHATSAPP' --callback_data '1' --url 'https://wa.me/51928565088'
 # Ejecutando escucha del bot
 while true; do
     ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
