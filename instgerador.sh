@@ -1,7 +1,7 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NhdmFsaWVyaTIyL01vZC9tYXN0ZXIvSW5zdGFsbC9kYWs="
+SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2FsYW4xMjM0NTc4L0dFTkVSQURPUi1ORVctVUxUSU1BVEUtT1JJR0lOQUwvbWFzdGVyL2dlcmFkb3I="
 SUB_DOM='base64 -d'
 rm $(pwd)/$0
 ofus () {
@@ -47,7 +47,7 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/diesel09/genmx8.3/master/GENERADOR-VPS-MX/Control-IP")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/cavalieri22/Mod/master/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;31m====================================================="
   echo -e "\033[1;31m       ¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
