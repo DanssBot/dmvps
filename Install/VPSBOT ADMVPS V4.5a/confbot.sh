@@ -42,8 +42,20 @@ echo -e "$bar"
 echo -n "Limite: "
 read opcion
 echo "$opcion" > ${CIDdir}/limit
+echo "$opcion" > /etc/limit
+#echo "sed -i "s/1001282138571/0/g" /etc/gerar-sh-log
+echo '#!/bin/bash -e
+sleep 24h
+uskk=$(cat < /etc/ADM-db/limit)
+lim=$(cat < /etc/limit)
+uskk=$(( $uskk + $lim ))
+echo $uskk > /etc/ADM-db/limit
+screen -dmS sumlimit bash /etc/ADM-db/sumlimit
+exit
+' > ${CIDdir}/sumlimit
 echo -e "$bar"
 read foo
+screen -dmS sumlimit bash /etc/ADM-db/sumlimit
 bot_gen
 }
 
@@ -244,7 +256,7 @@ PID_on=$(ps x|grep -v grep|grep "modelid")
 limcont=$(cat /etc/ADM-db/limit) 
 [[ "${limcont}" = "999" ]] && limted="Ilimitado" || limted=$(cat /etc/ADM-db/limit)
 echo -e "$bar"
-echo -e "     \e[47m \e[30m>>>>>>  BotGen \e[1;36mADM-VPS\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
+echo -e "     \e[47m \e[30m>>>>>>  BotGen by \e[1;3ADM-VPS\e[1;32m  $(cat ${CIDdir}/vercion)\e[0m\e[47m \e[30m<<<<<< \e[0m"
 echo -e "$bar"
 echo -e "\033[1;32m[1] \033[1;36m> \033[1;37mTOKEN DEL BOT $tk"
 echo -e "\033[1;32m[2] \033[1;36m> \033[1;37mINICIAR/PARAR BOT $PID_GEN\033[0m"
@@ -255,6 +267,7 @@ echo -e "\033[1;32m[6] \033[1;36m> \033[1;37mMANUAL De Uso"
 echo -e "\033[1;32m[7] \033[1;36m> \033[1;37mAutorizar ID Limitado $PID_on"
 echo -e "\033[1;32m[8] \033[1;36m> \033[1;37mActualizar BotGen"
 echo -e "\033[1;32m[9] \033[1;36m> \033[1;37mAplicar Limite diario de Generadas \033[1;32m$limted"
+echo -e "\033[1;32m[10] \033[1;36m> \033[1;37mAplicar Mensaje de Bienvenida de No Autorizado"
 echo -e "$bar"
 echo -e "$bar"
 echo -e "\e[1;32m[0] \e[36m>\e[0m \e[47m\e[30m <<ATRAS "
@@ -269,7 +282,7 @@ case $opcion in
 4) ini_res;;
 5) msj_prueba;;
 6) ayuda_fun;;
-7) source <(curl -sSL https://www.dropbox.com/s/kb284oy50xwy7aq/bot-permited.sh) ;;
+7) source <(curl -sSL https://www.dropbox.com/s/5suwcbbxgbiltfn/bot-permited.sh) ;;
 8) act-bot ;;
 9) lim-bot ;;
 *) bot_gen;;
