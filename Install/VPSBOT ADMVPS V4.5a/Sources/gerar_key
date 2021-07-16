@@ -72,8 +72,13 @@ nombrevalue="${chatuser}"
 [[ "$(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l)" -ge "$(cat < /etc/ADM-db/limit)" ]] && 
 {
 local bot_retorno="$LINE\n"
-bot_retorno+="Limite diario Traspazado\n"
-bot_retorno+="SALIENDO DEL GENERDOR AUTOATICO\n"
+bot_retorno+="OOOH!, @$message_from_username - Parece que has Alzanzado el Limite Permitido\n"
+bot_retorno+="Si deseas Usar el Generador sin Limite , Conctacta con $(cat < /etc/ADM-db/resell)\n"
+bot_retorno+=" Recuerda que Todo Esfuerzo Vale, Solicita Accedo \n"
+bot_retorno+=" Limite Permitido : $(cat < /etc/ADM-db/limit) \n"
+bot_retorno+=" 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04\n         𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
+bot_retorno+=" 🔐 『 $(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l) 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l) 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
+bot_retorno+=" ⌚⌚ Hora Actual del Bot : $(printf '%(%D-%H:%M:%S)T')⌚⌚\n"
 bot_retorno+="$LINE\n"
 msj_fun
 exit
