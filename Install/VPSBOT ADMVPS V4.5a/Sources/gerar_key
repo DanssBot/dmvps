@@ -1,0 +1,134 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+
+# verificacion primarias
+meu_ip_fun () {
+MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+MIP2=$(wget -qO- ipv4.icanhazip.com)
+[[ "$MIP" != "$MIP2" ]] && IP="$MIP2" || IP="$MIP"
+}
+
+[[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="cabecalho menu_credito ferramentas limitera menu_inst PPub.py usercodes ferramentascodes limiterb menu-txt payloads ssl user-txt ferramentas-txt limiter.sh paysnd.sh trans verifica confdropbear PDirect.py v-local.log idioma_geral PGet.py pwd.pwd ultrahost idioma_menuinst menu optimizador POpen.py shadowsocks.sh fai2ban overtcp PPriv.py user"
+SCPT_DIR="/etc/SCRIPT"
+[[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
+INSTA_ARQUIVOS="ADMVPS.zip"
+DIR="/etc/http-shell"
+LIST="SPVMDA"
+[[ -e /etc/menu_ito ]] && nomkey="$(cat /etc/menu_ito)" || nomkey="$(curl -sSL "https://www.dropbox.com/s/1qe8hraqmfhpwio/menu_credito")"
+[[ -e /etc/menu_numito ]] && menumito="$(cat /etc/menu_numito)" || menumito="https://t.me/birkank_22bot"
+
+
+
+gerar_key () {
+limcont=$(cat /etc/ADM-db/limit) 
+[[ "$limcont" -ge "998" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
+#echo -e "$(cat < /etc/ADM-db/resell)" > ${SCPT_DIR}/menu_credito
+meu_ip_fun
+echo -e "$message_from_first_name $message_from_last_name" > ${SCPT_DIR}/menu_credito
+valuekey="$(date | md5sum | head -c10)"
+valuekey+="$(echo $(($RANDOM*10))|head -c 5)"
+oUP=$(wget -qO- ifconfig.me)
+fun_list "$valuekey"
+keyfinal=$(ofus "$oUP:8888/$valuekey/$LIST")
+local bot_retorno="$LINE\n"
+echo $nomkey > ${SCPT_DIR}/menu_credito
+#   🚫 Sin TU RESELLER EN LA KEY 🚫\n
+bot_retorno+=" Key Otorgada a $message_from_first_name $message_from_last_name Exitosamente ✅\n ⚠️ D𝚎𝚜𝚝𝚛𝚞𝚌𝚌𝚒𝚘𝚗 𝚎𝚗 12𝙷 𝚘 𝚊𝚕 𝚄𝚜𝚊𝚛𝚕𝚊 ⚠️\n"
+bot_retorno+="  Acceso :『 $limted 』, Tus 𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨『 $numkey_gen 』🗝️\n"
+bot_retorno+="$LINE\n"
+bot_retorno+="  ⚠️ 𝚃𝙴𝙽𝙳𝚁𝙰𝚂 𝙰𝙲𝙲𝙴𝚂𝙾 𝙸𝙻𝙸𝙼𝙸𝚃𝙰𝙳𝙾 ⚠️ \n"
+bot_retorno+=" 🛡️ 𝚁𝙴𝚂𝙴𝙻𝙻𝙴𝚁 𝙰𝚌𝚝𝚞𝚊𝚕 🛡️ : $message_from_first_name $message_from_last_name\n"
+bot_retorno+="$LINE\n"
+bot_retorno+=" 💥 ${keyfinal} 💥\n"
+bot_retorno+="$LINE\n"
+bot_retorno+="  🛡️  𝙸𝚗𝚜𝚝𝚊𝚕𝚊𝚍𝚘𝚛  𝙾𝚏𝚒𝚌𝚒𝚊𝚕  🛡️ \n"
+bot_retorno+="$LINE\n"
+bot_retorno+="apt update -y;apt upgrade -y;wget -q https://www.dropbox.com/s/7xlgima7qsexoqo/instala.sh; chmod 777 instala.sh; ./instala.sh\n"
+bot_retorno+="$LINE\n"
+bot_retorno+="   🧬🧬 Soporte - OS 🧬🧬 \n  Ubuntu 14 - 16 - 18 - 20 (x64)\n          Debian 7,8,9,10 (x64) \n 𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
+bot_retorno+=" 🔐 𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨『 $numkey_used 』 🔓,  𝘒𝘦𝘺𝘴 𝘈𝘤𝘵𝘪𝘷𝘢𝘴 『 $(ls /etc/http-shell/ | grep name | wc -l) 』 🗝️ \n"
+bot_retorno+=" ⌚⌚ Hora Actual del Bot : $(printf '%(%D-%H:%M:%S)T')⌚⌚\n"
+bot_retorno+="$LINE\n"
+msj_fun
+echo -e $bot_retorno >> ${keytxt}/key_${chatuser}.txt
+upfile_fun ${keytxt}/key_${chatuser}.txt
+rm ${keytxt}/key_${chatuser}.txt
+#echo -e '𝔸𝔻𝕄-𝕍ℙ𝕊' > ${SCPT_DIR}/menu_credito
+}
+fun_list () {
+rm ${SCPT_DIR}/*.x.c &> /dev/null
+unset KEY
+KEY="$1"
+echo $KEY >> /root/ID-tses
+#CRIA DIR
+[[ ! -e ${DIR} ]] && mkdir ${DIR}
+#ENVIA ARQS
+i=0
+VALUE+="gerar.sh instgerador.sh http-server.py lista-arq $BASICINST"
+for arqx in `ls ${SCPT_DIR}`; do
+[[ $(echo $VALUE|grep -w "${arqx}") ]] && continue 
+echo -e "[$i] -> ${arqx}"
+arq_list[$i]="${arqx}"
+let i++
+done
+#CRIA KEY
+[[ ! -e ${DIR}/${KEY} ]] && mkdir ${DIR}/${KEY}
+#PASSA ARQS
+nombrevalue="${chatuser}"
+[[ "$(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l)" -ge "$(cat < /etc/ADM-db/limit)" ]] && 
+{
+local bot_retorno="$LINE\n"
+bot_retorno+="OOOH!, @$message_from_username - Parece que has Alzanzado el Limite Permitido\n"
+bot_retorno+=" TOTAL DE KEYS USADAS EN EL BOT 🔮『 $(cat < /etc/http-instas) 』\n"
+bot_retorno+="  Acceso :『 $limted 』, Tus 𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨『 $numkey_gen 』🗝️\n"
+bot_retorno+="$LINE\n"
+bot_retorno+=" Si deseas Usar el Generador sin Limite , Conctacta con $(cat < /etc/ADM-db/resell)\n"
+bot_retorno+=" Recuerda que Todo Esfuerzo Vale, Solicita Acceso \n"
+bot_retorno+=" Si Generaste Keys, Usalas no gastes Limite en vano  \n"
+#bot_retorno+="  𝘓𝘪𝘮𝘪𝘵𝘦 𝘗𝘦𝘳𝘮𝘪𝘵𝘪𝘥𝘰 :『 $(cat < /etc/ADM-db/limit) 』, 𝘒𝘦𝘺𝘴 𝘈𝘤𝘵𝘪𝘷𝘢𝘴 『 $(ls /etc/http-shell/ | grep name | wc -l) 』🗝️\n"
+bot_retorno+="   🧬🧬 Soporte - OS 🧬🧬 \n  Ubuntu 14 - 16 - 18 - 20 (x64)\n          Debian 7,8,9,10 (x64) \n 𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
+bot_retorno+=" 🔐 𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨『 $(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l) 』 🔓, 𝘒𝘦𝘺𝘴 𝘈𝘤𝘵𝘪𝘷𝘢𝘴 『 $(ls /etc/http-shell/ | grep name | wc -l) 』 🗝️ \n"
+bot_retorno+=" ⌚⌚ Hora Actual del Bot : $(printf '%(%D-%H:%M:%S)T')⌚⌚\n"
+bot_retorno+="$LINE\n"
+msj_fun
+exit
+} ||
+echo "$nombrevalue" >> /etc/ADM-db/num-key.cont
+numkey_used=$(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l)
+numkey_gen=$(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l)
+#ADM BASIC
+arqslist="$BASICINST"
+for arqx in `echo "${arqslist}"`; do
+[[ -e ${DIR}/${KEY}/$arqx ]] && continue #ANULA ARQUIVO CASO EXISTA
+cp ${SCPT_DIR}/$arqx ${DIR}/${KEY}/
+echo "$arqx" >> ${DIR}/${KEY}/${LIST}
+done
+rm ${SCPT_DIR}/*.x.c &> /dev/null
+echo "$nombrevalue" > ${DIR}/${KEY}.name
+[[ ! -z $IPFIX ]] && echo "$IPFIX" > ${DIR}/${KEY}/keyfixa
+at now +12 hours <<< "rm -rf ${DIR}/${KEY} && rm -rf ${DIR}/${KEY}.name"
+}
+
+ofus () {
+unset server
+server=$(echo ${txt_ofuscatw}|cut -d':' -f1)
+unset txtofus
+number=$(expr length $1)
+for((i=1; i<$number+1; i++)); do
+txt[$i]=$(echo "$1" | cut -b $i)
+case ${txt[$i]} in
+".")txt[$i]="x";;
+"x")txt[$i]=".";;
+"1")txt[$i]="@";;
+"@")txt[$i]="1";;
+"2")txt[$i]="?";;
+"?")txt[$i]="2";;
+"4")txt[$i]="%";;
+"%")txt[$i]="4";;
+"/")txt[$i]="K";;
+"K")txt[$i]="/";;
+esac
+txtofus+="${txt[$i]}"
+done
+echo "$txtofus" | rev
+}
