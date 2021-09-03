@@ -60,7 +60,13 @@ addID_reply () {
           bot_retorno+="$LINE\n"
           bot_retorno+="New ID: ${message_text[$id]}\n"
           bot_retorno+="$LINE"
-
+          #bot_retorno+="$(< ${CID})\n"
+          bot_retorno+="$(< ${CID})\n"
+          bot_retorno+="$LINE\n"
+          bot_retorno+="New ID: ${ids}\n"
+          bot_retorno+="Valido Hasta : ${valid}\n"
+          bot_retorno+="$LINE"
+          
           bot_retor="  ⚡ 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  Nuevamente 𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  ADM-VPS  ⚡\n"
           bot_retor+="𝙃𝙤𝙡𝙖 『 $message_from_first_name $message_from_last_name 』\n"
           bot_retor+="El Administrador $(cat < /etc/ADM-db/resell) te autorizo\n"
