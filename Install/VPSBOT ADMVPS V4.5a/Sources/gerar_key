@@ -31,6 +31,8 @@ oUP=$(wget -qO- ifconfig.me)
 fun_list "$valuekey"
 keyfinal=$(ofus "$oUP:8888/$valuekey/$LIST")
 local bot_retorno="$LINE\n"
+#echo $nomkey > ${SCPT_DIR}/menu_credito
+#   🚫 Sin TU RESELLER EN LA KEY 🚫\n
 bot_retorno+=" Key Otorgada a $message_from_first_name $message_from_last_name Exitosamente ✅\n ⚠️ D𝚎𝚜𝚝𝚛𝚞𝚌𝚌𝚒𝚘𝚗 𝚎𝚗 12𝙷 𝚘 𝚊𝚕 𝚄𝚜𝚊𝚛𝚕𝚊 ⚠️\n"
 bot_retorno+="  Acceso :『 $limted 』, Tus 𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨『 $numkey_gen 』🗝️\n"
 bot_retorno+="$LINE\n"
