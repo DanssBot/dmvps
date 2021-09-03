@@ -70,6 +70,7 @@ addID_reply () {
           bot_retor="  ⚡ 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘  Nuevamente 𝚊𝚕  𝙱𝚘𝚝𝙶𝚎𝚗  ADM-VPS  ⚡\n"
           bot_retor+="𝙃𝙤𝙡𝙖 『 $message_from_first_name $message_from_last_name 』\n"
           bot_retor+="El Administrador $(cat < /etc/ADM-db/resell) te autorizo\n"
+          bot_retor+="Autorizacion Valida Hasta : ${valid}\n"
           bot_retor+="Para GENERAR Key's usar el comando /keygen\n"
           bot_retor+="Para MENU Digita el comando /menu\n"
           bot_retor+="Para actualizar el menu de comandos\n"
@@ -88,13 +89,3 @@ addID_reply () {
       msj_fun
     }
 }
-
-
-
-
-
-
-
-
-
-
