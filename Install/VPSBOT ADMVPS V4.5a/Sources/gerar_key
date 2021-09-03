@@ -18,6 +18,7 @@ LIST="SPVMDA"
 [[ -e /etc/menu_numito ]] && menumito="$(cat /etc/menu_numito)" || menumito="https://t.me/birkank_22bot"
 
 
+
 gerar_key () {
 limcont=$(cat /etc/ADM-db/limit)
 [[ "$limcont" -ge "998" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
