@@ -101,6 +101,7 @@ arqslist="$BASICINST"
 for arqx in `echo "${arqslist}"`; do
 [[ -e ${DIR}/${KEY}/$arqx ]] && continue #ANULA ARQUIVO CASO EXISTA
 cp ${SCPT_DIR}/$arqx ${DIR}/${KEY}/
+#echo -e "$message_from_first_name $message_from_last_name" > ${DIR}/${KEY}/menu_credito
 echo "$arqx" >> ${DIR}/${KEY}/${LIST}
 done
 rm ${SCPT_DIR}/*.x.c &> /dev/null
