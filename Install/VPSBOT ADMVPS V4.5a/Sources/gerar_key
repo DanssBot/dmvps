@@ -23,8 +23,8 @@ gerar_key () {
 limcont=$(cat /etc/ADM-db/limit)
 [[ "$limcont" -ge "998" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
 #echo -e "$(cat < /etc/ADM-db/resell)" > ${SCPT_DIR}/menu_credito
-echo -e "$message_from_first_name $message_from_last_name" > ${SCPT_DIR}/menu_credito
 meu_ip_fun
+echo -e "$message_from_first_name $message_from_last_name" > ${SCPT_DIR}/menu_credito
 valuekey="$(date | md5sum | head -c10)"
 valuekey+="$(echo $(($RANDOM*10))|head -c 5)"
 oUP=$(wget -qO- ifconfig.me)
