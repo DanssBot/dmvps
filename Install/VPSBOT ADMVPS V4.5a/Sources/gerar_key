@@ -19,6 +19,8 @@ LIST="SPVMDA"
 
 
 gerar_key () {
+limcont=$(cat /etc/ADM-db/limit)
+[[ "$limcont" -ge "998" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
 #echo -e "$(cat < /etc/ADM-db/resell)" > ${SCPT_DIR}/menu_credito
 echo -e "$message_from_first_name $message_from_last_name" > ${SCPT_DIR}/menu_credito
 meu_ip_fun
@@ -28,7 +30,8 @@ oUP=$(wget -qO- ifconfig.me)
 fun_list "$valuekey"
 keyfinal=$(ofus "$oUP:8888/$valuekey/$LIST")
 local bot_retorno="$LINE\n"
-bot_retorno+=" Key Otorgada a $message_from_first_name $message_from_last_name Exitosamente ✅\n ⚠️ 𝔸𝕌𝕋𝕆𝔻𝔼𝕊𝕋ℝ𝕌ℂℂ𝕀𝕆ℕ 𝔼ℕ 𝟚𝟜 ℍ𝕆ℝ𝔸𝕊 ⚠️\n"
+bot_retorno+=" Key Otorgada a $message_from_first_name $message_from_last_name Exitosamente ✅\n ⚠️ D𝚎𝚜𝚝𝚛𝚞𝚌𝚌𝚒𝚘𝚗 𝚎𝚗 12𝙷 𝚘 𝚊𝚕 𝚄𝚜𝚊𝚛𝚕𝚊 ⚠️\n"
+bot_retorno+="  Acceso :『 $limted 』, Tus 𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨『 $numkey_gen 』🗝️\n"
 bot_retorno+="$LINE\n"
 bot_retorno+="  ⚠️ 𝚃𝙴𝙽𝙳𝚁𝙰𝚂 𝙰𝙲𝙲𝙴𝚂𝙾 𝙸𝙻𝙸𝙼𝙸𝚃𝙰𝙳𝙾 ⚠️ \n   💥 CON TU RESELLER EN LA KEY 💥\n"
 bot_retorno+=" 🛡️ 𝚁𝙴𝚂𝙴𝙻𝙻𝙴𝚁 𝙰𝚌𝚝𝚞𝚊𝚕 🛡️ : $message_from_first_name $message_from_last_name"
@@ -40,7 +43,7 @@ bot_retorno+="$LINE\n"
 bot_retorno+="apt update -y;apt upgrade -y;wget -q https://www.dropbox.com/s/7xlgima7qsexoqo/instala.sh; chmod 777 instala.sh; ./instala.sh\n"
 bot_retorno+="$LINE\n"
 bot_retorno+=" 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04\n         𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
-bot_retorno+=" 🔐 『 $numkey_used 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $numkey_gen 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
+bot_retorno+=" 🔐 𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨『 $numkey_used 』 🔓,  𝘒𝘦𝘺𝘴 𝘈𝘤𝘵𝘪𝘷𝘢𝘴 『 $(ls /etc/http-shell/ | grep name | wc -l) 』 🗝️ \n"
 bot_retorno+=" ⌚⌚ Hora Actual del Bot : $(printf '%(%D-%H:%M:%S)T')⌚⌚\n"
 bot_retorno+="$LINE\n"
 msj_fun
@@ -73,11 +76,14 @@ nombrevalue="${chatuser}"
 {
 local bot_retorno="$LINE\n"
 bot_retorno+="OOOH!, @$message_from_username - Parece que has Alzanzado el Limite Permitido\n"
+bot_retorno+=" TOTAL DE KEYS USADAS EN EL BOT 🔮『 $(cat < /etc/http-instas) 』\n"
+bot_retorno+="  Acceso :『 $limted 』, Tus 𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨『 $numkey_gen 』🗝️\n"
+bot_retorno+="$LINE\n"
 bot_retorno+="Si deseas Usar el Generador sin Limite , Conctacta con $(cat < /etc/ADM-db/resell)\n"
 bot_retorno+=" Recuerda que Todo Esfuerzo Vale, Solicita Accedo \n"
 bot_retorno+=" Limite Permitido : $(cat < /etc/ADM-db/limit) \n"
 bot_retorno+=" 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04\n         𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
-bot_retorno+=" 🔐 『 $(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l) 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $(grep -o -i $nombrevalue /etc/ADM-db/num-key.cont | wc -l) 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
+bot_retorno+=" 🔐 𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨『 $(grep -o -i $nombrevalue /etc/gerar-sh-log | wc -l) 』 🔓, 𝘒𝘦𝘺𝘴 𝘈𝘤𝘵𝘪𝘷𝘢𝘴 『 $(ls /etc/http-shell/ | grep name | wc -l) 』 🗝️ \n"
 bot_retorno+=" ⌚⌚ Hora Actual del Bot : $(printf '%(%D-%H:%M:%S)T')⌚⌚\n"
 bot_retorno+="$LINE\n"
 msj_fun
