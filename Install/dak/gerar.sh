@@ -129,7 +129,7 @@ fun_list "$valuekey"
 keyfinal=$(ofus "$IP:8888/$valuekey/$LIST")
 echo -e "KEY: $keyfinal"
 echo -e "$BARRA"
-echo -e "\e[1;37mScript : apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/lacasitamx/dankeladm/master/instalador/instalar.sh && chmod +x *.sh && ./instalar.sh"
+echo -e "\e[1;37mScript : apt-get update -y; apt-get upgrade -y; wget https://www.dropbox.com/s/8j8wyl0pbokvu1k/instalar.sh && chmod +x *.sh && ./instalar.sh"
 echo -e "$BARRA"
 read -p "Enter para finalizar"
 }
