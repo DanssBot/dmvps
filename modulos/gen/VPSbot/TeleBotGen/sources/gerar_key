@@ -30,19 +30,19 @@ bot_retorno+="$LINE\n"
 bot_retorno+="  ⚠️ 𝚃𝙴𝙽𝙳𝚁𝙰𝚂 𝙰𝙲𝙲𝙴𝚂𝙾 𝙸𝙻𝙸𝙼𝙸𝚃𝙰𝙳𝙾 ⚠️ \n   🚫 Sin TU RESELLER EN LA KEY 🚫\n"
 bot_retorno+=" 🛡️ 𝚁𝙴𝚂𝙴𝙻𝙻𝙴𝚁 𝙰𝚌𝚝𝚞𝚊𝚕 🛡️ : $nomkey\n"
 bot_retorno+="$LINE\n"
-bot_retorno+=" 💥 ${keyfinal} 💥\n"
+bot_retorno+=" ⚡ <code>${keyfinal}</code> ⚡\n"
 bot_retorno+="$LINE\n"
 bot_retorno+="  🛡️  𝙸𝚗𝚜𝚝𝚊𝚕𝚊𝚍𝚘𝚛  𝙾𝚏𝚒𝚌𝚒𝚊𝚕  🛡️ \n"
 bot_retorno+="$LINE\n"
-bot_retorno+="apt update -y;apt upgrade -y;wget -q https://www.dropbox.com/s/l9pqqm8yuxmhok9/instala.sh; chmod 777 instala.sh; ./instala.sh\n"
+bot_retorno+="<code> apt update -y; apt upgrade -y; wget -q https://www.dropbox.com/s/l9pqqm8yuxmhok9/instala.sh; chmod 777 instala.sh; ./instala.sh</code>\n"
 bot_retorno+="$LINE\n"
 bot_retorno+=" 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04\n         𝙍𝙚𝙘𝙤𝙢𝙚𝙣𝙙𝙖𝙙𝙤 𝙐𝙗𝙪𝙣𝙩𝙪 18.04 \n  🪦 Solicita Creditos de tu KEY 🛡️⚔️\n"
 bot_retorno+=" 🔐 『 $numkey_used 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $numkey_gen 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
 bot_retorno+="$LINE\n"
 msj_fun
-echo -e $bot_retorno >> ${keytxt}/key_${chatuser}.txt
-upfile_fun ${keytxt}/key_${chatuser}.txt
-rm ${keytxt}/key_${chatuser}.txt
+#echo -e $bot_retorno >> ${keytxt}/key_${chatuser}.txt
+#upfile_fun ${keytxt}/key_${chatuser}.txt
+#rm ${keytxt}/key_${chatuser}.txt
 #echo -e '𝔸𝔻𝕄-𝕍ℙ𝕊' > ${SCPT_DIR}/menu_credito
 }
 fun_list () {
