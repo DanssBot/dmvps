@@ -43,7 +43,6 @@ msj_fun
 echo -e ${keyfinal} > ${keytxt}/key_@${message_from_username}.txt
 upfile_fun ${keytxt}/key_@${message_from_username}.txt
 rm ${keytxt}/key_@${message_from_username}.txt
-
 #echo -e '𝔸𝔻𝕄-𝕍ℙ𝕊' > ${SCPT_DIR}/menu_credito
 }
 fun_list () {
