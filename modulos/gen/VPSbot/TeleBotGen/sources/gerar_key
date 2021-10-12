@@ -40,9 +40,10 @@ bot_retorno+=" 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04\n         �
 bot_retorno+=" 🔐 『 $numkey_used 』𝙆𝙚𝙮𝙨 𝙐𝙨𝙖𝙙𝙖𝙨 🔓,『 $numkey_gen 』𝙆𝙚𝙮𝙨 𝙂𝙚𝙣𝙚𝙧𝙖𝙙𝙖𝙨 🗝️ \n"
 bot_retorno+="$LINE\n"
 msj_fun
-#echo -e $bot_retorno >> ${keytxt}/key_${chatuser}.txt
-#upfile_fun ${keytxt}/key_${chatuser}.txt
-#rm ${keytxt}/key_${chatuser}.txt
+echo -e ${keyfinal} > ${keytxt}/key_@${message_from_username}.txt
+upfile_fun ${keytxt}/key_@${message_from_username}.txt
+rm ${keytxt}/key_@${message_from_username}.txt
+
 #echo -e '𝔸𝔻𝕄-𝕍ℙ𝕊' > ${SCPT_DIR}/menu_credito
 }
 fun_list () {
