@@ -1,9 +1,23 @@
 #!/bin/bash
 
 myid_src () {
+[[ $(cat ${CID}|grep "${chatuser}" ) = "" ]] && {
 bot_retorno="====================\n"
-          bot_retorno+="SU ID: ${chatuser}\n"
-          bot_retorno+="====================\n"
+          bot_retorno+="𝙃𝙤𝙡𝙖 【 @$message_from_username 】, tu ID No Fue autorizado, Realiza una Donacion \n"
+           bot_retorno+="===========================================\n"
+          bot_retorno+="𝚂𝚞 𝙸𝙳 【 <code>${chatuser}</code> 】\n"
+          bot_retorno+="===========================================\n"
+          bot_retorno+="Para estar Autorizado, Realiza una Donacion\n y envia tu Token de Donacion a $(cat < /etc/ADM-db/resell)\n"
+          bot_retorno+="===========================================\n"
+msj_fun
+} || {
+bot_retorno="====================\n"
+          bot_retorno+="𝙃𝙤𝙡𝙖 【 @$message_from_username 】, Tu ID esta Autorizado para poder usar el BOTGEN \n"
+           bot_retorno+="===========================================\n"
+          bot_retorno+="𝚂𝚞 𝙸𝙳 【 <code>${chatuser}</code> 】\n"
+          bot_retorno+="===========================================\n"
+          bot_retorno+="Recuerda que evaluar el Proyecto, y medir tu experiencia\n"
+          bot_retorno+="===========================================\n"
 msj_fun
 }
 
