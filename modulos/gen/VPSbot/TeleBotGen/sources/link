@@ -4,7 +4,7 @@ link_src () {
 	bot_retorno+=" 💥 Instalador Oficial 💥 \n 🧬 Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04 \n"
 	bot_retorno+="Verificada tus Keys, https://t.me/birkank_22bot Reseller : @birkank22 \n"
 	bot_retorno+="$LINE\n"
-	bot_retorno+="apt update -y; apt upgrade -y;wget -q https://www.dropbox.com/s/l9pqqm8yuxmhok9/instala.sh; chmod 777 instala.sh; ./instala.sh\n"
+	bot_retorno+="<code> apt update -y; apt upgrade -y; wget -q https://www.dropbox.com/s/l9pqqm8yuxmhok9/instala.sh; chmod 777 instala.sh; ./instala.sh</code>\n"
 	bot_retorno+="$LINE\n"
 msj_fun
 }
